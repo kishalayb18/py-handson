@@ -105,6 +105,13 @@
                     }
                 ]
             }
+        },
+        {
+            "name": "kishalay",
+            "email": "kishalay@gmail.com",
+            "password": "newpw",
+            "username": "kishalayb18",
+            "purchases": {}
         }
     ]
 }

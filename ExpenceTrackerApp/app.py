@@ -116,6 +116,10 @@ def get_today_purchase():
         # return { "response":db['users'][user_idx]['purchases'][curr_date]}
         return jsonify(response=db['users'][user_idx]['purchases'][curr_date])
 
+@app.route("/hello",methods=['GET'])
+def hello():
+    return jsonify("hello world")
+
 #get purchases between a range of dates    
 @app.route("/get_purchases_from_to",methods=['GET'])
 def get_purchases_from_to():
@@ -141,5 +145,8 @@ def get_purchases_from_to():
 def average_amount_of_purchase():
     pass
 
+# hosting of the server
+# default port 8080
+# debug true will help to refresh the server without restarting it
 if __name__=="__main__":
-    app.run(host="0.0.0.0",port=5000,debug=True)
+    app.run(host="0.0.0.0",port=5001,debug=True)
