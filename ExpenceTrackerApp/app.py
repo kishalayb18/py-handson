@@ -118,7 +118,9 @@ def get_today_purchase():
 
 @app.route("/hello",methods=['GET'])
 def hello():
-    return jsonify("hello world")
+    token= int(request.args["user_index"])
+    greetings=request.args["greet"]
+    return greetings+" "+db["users"][token]["name"]
 
 #get purchases between a range of dates    
 @app.route("/get_purchases_from_to",methods=['GET'])
